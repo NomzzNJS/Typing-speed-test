@@ -1,7 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
+import commonWords from '../public/english-top-1000.json'
 
-const WORD_POOL = ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog", "apple", "banana", "computer", "engineer", "software", "system", "react", "network", "code", "debug"];
-const generateWords = (count) => {
+
+//const WORD_POOL = ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog", "apple", "banana", "computer", "engineer", "software", "system", "react", "network", "code", "debug"];
+const WORD_POOL = commonWords
+const generateWords= (count) => {
   const words = [];
   for (let i = 0; i<count; i++) {
     const randomIndex = Math.floor(Math.random() * WORD_POOL.length);
